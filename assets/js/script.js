@@ -238,7 +238,3 @@ async function loadMapByStoneIndex() {
     // This calls the function to load the map
     loadMap();
 }
-
-function pageLoadingScreen() {
-
-}
