@@ -1,12 +1,42 @@
-.stones-container {
+/* .stones-container {
     height: 100vh;
     overflow-y: auto;
 }
 
 #map {
     height: 100%;
+} */
+/* .stones-container {
+    margin-top: 30px;
 }
 
+.stone-image {
+    cursor: pointer;
+}
+
+.stone-image img {
+    width: 100%;
+    height: auto;
+}
+
+#map {
+    margin-top: 30px;
+}
+
+@media (max-width: 767px) {
+    .row {
+        flex-direction: column;
+    }
+
+    .col-lg-4 {
+        width: 100%;
+    }
+
+    #map {
+        height: 300px;
+        margin-top: 0;
+    }
+} */
 .card-img-top {
     max-height: 150px;
     object-fit: contain;
