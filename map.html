@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infinity Stones</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="preload" href="https://unpkg.com/maplibre-gl@3.0.0/dist/maplibre-gl.js" as="script">
+    <script src="https://unpkg.com/maplibre-gl@3.0.0/dist/maplibre-gl.js"></script>
+    <link href="https://unpkg.com/maplibre-gl@3.0.0/dist/maplibre-gl.css" rel="preload" as="style" />
+    <link href="https://unpkg.com/maplibre-gl@3.0.0/dist/maplibre-gl.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="loading-overlay" id="loadingOverlay">
+        <div class="spinner-grow text-primary text-center" style="width: 3rem; height: 3rem; margin-right: 1.5rem;"
+            role="status"></div>
+                <div class="spinner-grow text-primary text-center" style="width: 1.5rem; height: 1.5rem; margin-right: 1.5rem;"
+                    role="status"></div>
+        <div class="loading-message text-center">Accessing</div>
+        <div class="spinner-grow text-primary text-center" style="width: 1.5rem; height: 1.5rem; margin-left: 1.5rem;"
+            role="status"></div>
+        <div class="spinner-grow text-primary text-center" style="width: 3rem; height: 3rem; margin-left: 1.5rem;"
+            role="status"></div>
+
+    </div>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">ThanosTrackr</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="infinity_stones.html">Infinity Stones</a>
+                    </li>
+                    <li class="nav-item nav-pills">
+                        <a class="nav-link active" href="map.html">Map</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-4 col-md-6 p-2">
+                <div class="stones-container">
+                    <h2 class="text-center mt-3">Infinity Stones</h2>
+                    <hr>
+                    <div class="row row-cols-4 justify-content-evenly " id="map-stone-content">
+                        <div class="card-content m-1 p-1 stone-image">
+                            <img src="assets/images/Mind_Stone_VFX.webp" alt="" class="img-thumbnail"
+                                onclick="showMapAndStones(0)">
+                            <p class="text-center justify-content-center">Mind Stone</p>
+                        </div>
+                        <div class="card-content m-1 p-1 stone-image">
+                            <img src="assets/images/Power_Stone_VFX.webp" alt="" class="img-thumbnail"
+                                onclick="showMapAndStones(1)">
+                            <p class="text-center justify-content-center">Power Stone</p>
+                        </div>
+                        <div class="card-content m-1 p-1 stone-image">
+                            <img src="assets/images/Reality_Stone_VFX.webp" alt="" class="img-thumbnail"
+                                onclick="showMapAndStones(2)">
+                            <p class="text-center justify-content-center">Reality Stone</p>
+                        </div>
+                        <div class="card-content m-1 p-1 stone-image">
+                            <img src="assets/images/Soul_Stone_VFX.webp" alt="" class="img-thumbnail"
+                                onclick="showMapAndStones(3)">
+                            <p class="text-center justify-content-center">Soul Stone</p>
+                        </div>
+                        <div class="card-content m-1 p-1 stone-image">
+                            <img src="assets/images/Space_Stone_VFX.webp" alt="" class="img-thumbnail"
+                                onclick="showMapAndStones(4)">
+                            <p class="text-center justify-content-center">Space Stone</p>
+                        </div>
+                        <div class="card-content m-1 p-1 stone-image">
+                            <img src="assets/images/Time_Stone_VFX.webp" alt="" class="img-thumbnail"
+                                onclick="showMapAndStones(5)">
+                            <p class="text-center justify-content-center">Time Stone</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-8 col-md-6 p-2">
+                <div id="map" class="h-100"></div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+    <script src="assets/js/script.js"></script>
+    <script>
+        loadMapByStoneIndex();
+    </script>
+</body>
+
+</html>
